@@ -1,0 +1,39 @@
+@import './githubLink.scss';
+
+.introduction{
+    width: 380px;
+    padding: 40px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 2fr 5fr 3fr 1fr;
+
+   
+    .web-list-nav{
+
+
+        li{
+            opacity: 0.5;
+            cursor: pointer;
+            transform-origin: 15%;
+           
+            transform: scale(0.9);
+            &:hover{
+                transform: scale(1.1);
+           
+                opacity: 1;
+            
+            }
+   
+            
+        }
+
+    }
+
+    & > :last-child{
+   
+        align-self: flex-end;
+
+    }
+
+
+}

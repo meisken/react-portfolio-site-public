@@ -1,0 +1,62 @@
+@import "./components/navbar.scss";
+@import "./components/massive_button.scss";
+@import "./components/HamburgerButton.scss";
+@import "./components/headline.scss";
+@import "./components/header.scss";
+@import "../variables/screenSize";
+
+.home{
+    position: relative;
+    height: 100vh;
+    @media screen and (max-width:$ipad){
+        height: 700px;
+        background-image: url("../img/hero-background.png");
+        background-size:auto 100%;
+        background-position: 40%;
+    }
+    
+
+    min-height: 550px;
+    overflow: hidden;
+
+    
+    .hero-wrapper{
+        padding:  20px 80px 0 80px;
+        @media screen and (max-width:$screen1368){
+            padding:  20px 40px 0 40px;
+        }
+        @media screen and (max-width:$ipad){
+            padding:  20px 20px 0 20px;
+        }
+        height: 100%;
+            .hero-body{
+                display: flex;
+                flex-direction: column;
+                @media screen and (min-width:$ipad){
+                    justify-content: flex-end;
+                    min-height: 525px;
+                    height: 60vh;
+                }
+                @media screen and (max-width:$ipad){
+                    margin-top: 10vh;
+                }
+        
+            }
+     
+    }
+
+    .hero-background{
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+   
+        z-index: -100;
+        min-height: 100%;
+        @media screen and(max-width:$ipad){
+            display: none;
+
+        }
+    }
+
+}

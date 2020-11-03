@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI SemiBold'), local('Segoe-UI-SemiBold'),
+        url('SegoeUI-SemiBold.woff2') format('woff2'),
+        url('SegoeUI-SemiBold.woff') format('woff'),
+        url('SegoeUI-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }

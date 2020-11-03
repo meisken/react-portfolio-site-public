@@ -1,0 +1,68 @@
+@import "../../variables/screenSize";
+$containerColor:var(--blue);
+$containerHoverColor:var(--blue);
+$containerActivatedColor:var(--blue);
+
+$hamburgerColor:var(--white);
+$hamburgerHoverColor:var(--white);
+.hamburger-button{
+    display: none;
+}
+@media screen and (max-width: $ipad){
+
+.hamburger-button{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    right: 20px;
+    top: 20px;
+ 
+    z-index: 100;
+    cursor: pointer;
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: $containerColor;
+
+    div{
+        height: 2px;
+        margin: 2px;
+        background: $hamburgerColor;
+        width:20px;
+        border-radius: 16px;
+    }
+    &:hover{
+        background: $containerHoverColor;
+        div{
+            background: $hamburgerHoverColor;
+            transition: 0.5s transform;
+        } 
+    }
+    &.active{
+        background: $containerActivatedColor;
+        
+
+
+        div:nth-child(1){
+  
+            transform: translateY(6px) rotate(45deg);
+            
+            
+        } 
+        div:nth-child(2){
+            transform: scale(0);
+        } 
+        div:nth-child(3){
+      
+            transform: translateY(-6px) rotate(-45deg);
+        } 
+    }
+
+}
+
+}

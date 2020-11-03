@@ -1,0 +1,38 @@
+@import "../../variables/screenSize";
+.massive-btn{
+    display: inline-block;
+
+    padding: 0.85em 5em;
+
+    user-select: none;  
+    font-size: 1.25em;
+    cursor: pointer;
+
+    position: relative;
+
+    transition: 0.15s ease-in-out;
+    background: var(--blue);
+    border-radius: 100px;
+
+    @media screen and (min-width:$ipad){
+        &:hover{
+            color: var(--blue);
+            background: var(--white);
+      
+    
+        }
+
+    }
+    &:active{
+        transform: scale(0.8);
+    }
+    @media screen and (max-width:$phone){
+        padding: 0.85em 0em;
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+}

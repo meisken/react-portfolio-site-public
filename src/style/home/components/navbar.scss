@@ -1,0 +1,182 @@
+
+@import "../../variables/screenSize";
+
+
+.navbar{
+
+    ul{
+        display: flex;
+        align-items: center;
+    
+        font-size: 1.35em;
+        font-weight: 600;
+        @media screen and (max-width: $ipad){
+
+            position: fixed;
+            background: var(--blue);
+            z-index: 100;
+            flex-direction: column;
+            left: 0;
+            top: 0;
+            height:var(--100vh,100vh);
+            width: 100%;
+            transition: 0.75s ease-out clip-path;
+            clip-path: circle(22px at calc(100% - 42.5px) 42.5px );
+
+          
+            &.opened{
+       
+                clip-path: circle(1000px at 94% 42.5px );
+
+            }
+
+        }
+      
+        li{
+            &:first-of-type{
+            }
+            margin-left: 55px;
+            padding: 10px 0 ;
+            height: 100%;
+            display: block;
+            @media screen and (max-width: $ipad){
+                margin-left: 0px;
+                display:flex !important;       
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        @media screen and (min-width: $ipad){
+            .cursor{
+                pointer-events: none;;
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 20%;
+        
+                background: var(--white);
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                mix-blend-mode: difference;
+        
+                transform: translate(-50%,-50%) scale(0);
+                transition: 0.3s ease-in-out transform;
+         
+            }
+            
+            &:hover .cursor{
+                transform: translate(-50%,-50%) scale(10) !important;
+                cursor: none;
+        
+            }
+        }
+
+
+    }
+
+
+}
+
+/*
+@import "../../variables/screenSize";
+
+
+.navbar{
+    position: relative;
+    ul{
+        display: flex;
+        align-items: center;
+    
+        font-size: 1.35em;
+        font-weight: 600;
+        @media screen and (max-width: $ipad){
+  
+
+    
+            &.opened{
+                position: fixed;
+                background: var(--blue);
+                z-index: 1;
+                flex-direction: column;
+                left: 0;
+                top: 0;
+                height:var(--100vh);
+                width: 100%;
+                li{
+                    display: flex !important;
+                }
+            }
+        }
+      
+        li{
+         
+            &:first-of-type{
+            }
+         
+
+
+            padding: 10px 0 ;
+            height: 100%;
+            margin-left: 55px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            @media screen and (max-width: $ipad){
+                margin-left: 0px;
+                display:none;
+            }
+            /*a{
+                position: relative;
+            }
+            a::before{ 
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-bottom: 2px solid var(--white);
+                border-top: 2px solid var(--white);
+                transform: scaleX(0);
+                transform-origin: center;
+                transition: 0.5s ease-in-out;
+            }
+            &:hover a::before{
+                transform: scaleX(1);
+            }
+            */
+   
+        /*}
+        .cursor{
+            pointer-events: none;;
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 20%;
+    
+            background: var(--white);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            mix-blend-mode: difference;
+    
+            transform: translate(-50%,-50%) scale(0);
+            transition: 0.3s ease-in-out transform;
+            @media screen and (max-width: $ipad){
+                display: none;
+            }
+        }
+        
+        &:hover .cursor{
+            transform: translate(-50%,-50%) scale(10) !important;
+            cursor: none;
+    
+        }
+
+    }
+
+
+}
+
+*/

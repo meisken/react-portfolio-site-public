@@ -1,0 +1,4 @@
+@import "./bold-italic/style.css";
+@import "./bold/style.css";
+@import "./italic/style.css";
+@import "./regular/style.css"

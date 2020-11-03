@@ -1,0 +1,248 @@
+@import '../fonts/index.css';
+@import './portfolio/Portfolio.scss';
+@import './home/home.scss';
+@import './what_i_do/what_i_do.scss';
+@import './variables/screenSize';
+@import './global/index.scss';
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+$screen:768px;
+
+html{
+    --black:#000;
+    --white:#fff;
+    --dark-blue:#051722;
+    --blue:#196A97;
+    --light-blue:#96C9E0;
+
+}
+body{
+    font-family: "Segoe UI";
+    background: black;
+    margin:0 ;
+    padding: 0;
+    color: white;
+
+
+}
+
+h1{
+    font-size: 3.75em;//60px
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 3.516em;//56.25px
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-size: 2.8125em;//45px
+    margin: 0;
+    padding: 0;
+}
+h4{
+    font-size: 1.875em;//30px
+    margin: 0;
+    padding: 0;
+}
+h5{
+    font-size: 1.641em;//26.256px
+    margin: 0;
+    padding: 0;
+}
+h6{
+    font-size: 1.172em;//18.752px
+    margin: 0;
+    padding: 0;
+}
+span{
+    font-size: 0.9375em;//15px
+    margin: 0;
+    padding: 0;
+}
+p{
+
+    font-size: 1.40625em;//23.4px
+    margin: 0; 
+    opacity: 0.8;
+    line-height: 40px;
+
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}    
+
+hr{
+    margin: 0;
+    padding: 0;
+    border:0;
+    background: white;
+    &.horizon{
+        height: 1px;
+        width: 35px;
+    
+    }
+}
+.SegoeUI-font{
+    font-family: "Segoe UI";
+    &.bold{
+        font-weight: 700;
+    }
+    &.light{
+        font-weight: 300;
+
+    }
+    &.regular{
+        font-weight: 400;
+    }
+    &.semibold{
+        font-weight: 600;
+    }
+}
+
+
+.FireMono-font{
+    font-family: "FireMono";
+    &.bold{
+        font-weight: 700;
+    }
+    &.regular{
+        font-weight: 400;
+    }
+    &.semibold{
+        font-weight: 600;
+    }
+}
+
+.Javanese-text-font{
+    font-family: "Javanese Text";
+    font-weight: 400;
+    line-height: 95px;
+}
+.Consolas-font{
+    font-family: "Consolas";
+    &.bold{
+        font-weight: 700;
+    }
+    &.regular{
+        font-weight: 400;
+    }
+}
+
+.flex{
+    display: flex;
+    &.column{
+        flex-direction: column;
+    }
+    &.all-center{
+        align-items: center;
+        justify-content: center;
+    }
+    &.justify-start{
+        justify-content:flex-start;
+    }
+    &.justify-center{
+        justify-content:center;
+    }
+    &.justify-end{
+        justify-content:flex-end;
+    }
+    &.justify-space-around{
+        justify-content: space-around;
+    }
+    &.justify-space-between{
+        justify-content: space-between;
+    }
+    &.justify-space-evenly{
+        justify-content: space-evenly;
+    }
+    &.align-start{
+        align-items: flex-start;
+    }
+    &.align-center{
+        align-items: center;
+    }
+    &.align-end{
+        align-items: flex-end;
+    }
+}
+
+.Inverted-btn{
+
+}
+//margin-bottom = mb
+//margin-top = m-t
+
+
+
+@for $i from 1 to 25 {
+    .mb-#{$i * 5} { 
+        margin-bottom: #{$i * 5}px !important;
+    }
+    .pb-#{$i * 5} { 
+        padding-bottom: #{$i * 5}px !important;
+    }
+    .mt-#{$i * 5} { 
+        margin-top: #{$i * 5}px !important;
+    }
+    .pt-#{$i * 5} { 
+        padding-top: #{$i * 5}px !important;
+    }
+    .w-#{$i * 25}{
+        width: #{$i * 25}px !important;
+    }
+    .h-#{$i * 25}{
+        height: #{$i * 25}px !important;
+    }
+}
+
+@for $i from 1 to 15 {
+    .mr-#{$i * 5} { 
+        margin-right: #{$i * 5}px !important;
+    }
+    .pr-#{$i * 5} { 
+        padding-right: #{$i * 5}px !important;
+    }
+    
+    .ml-#{$i * 5} { 
+        margin-left: #{$i * 5}px !important;
+    }
+    .pl-#{$i * 5} { 
+        padding-left: #{$i * 5}px !important;
+
+    }
+}
+@for $i from 1 to 10 {
+    .o-#{$i} {
+        opacity: #{$i * 0.1};
+    }
+}
+
+.bg-blue{
+    background: var(--blue);
+}
+
+.bg-light-blue{
+    background: var(--light-blue);
+}
+
+.bg-dark-blue{
+    background: var(--dark-blue);
+}
+
+.bg-black{
+    background: var(--black);
+}
+
+.bg-white{
+    background: var(--white);
+}
