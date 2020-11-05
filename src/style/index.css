@@ -1,9 +1,9 @@
-/* Error: expected "}".
- *    ,
- * 38 | }
- *    |  ^
- *    '
- *   portfolio\components\introduction.scss 38:2  @import
+/* Error: Undefined variable.
+ *   ,
+ * 9 |     @media screen and (max-width:$screen1368){
+ *   |                                  ^^^^^^^^^^^
+ *   '
+ *   portfolio\components\introduction.scss 9:34  @import
  *   portfolio\portfolio.scss 2:9                 @import
  *   index.scss 2:9                               root stylesheet */
 
@@ -15,5 +15,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a    \2577 \a 38 \2502  }\a    \2502   ^\a    \2575 \a   portfolio\\components\\introduction.scss 38:2  @import\a   portfolio\\portfolio.scss 2:9                 @import\a   index.scss 2:9                               root stylesheet';
+  content: "Error: Undefined variable.\a   \2577 \a 9 \2502      @media screen and (max-width:$screen1368){\d\a   \2502                                   ^^^^^^^^^^^\a   \2575 \a   portfolio\\components\\introduction.scss 9:34  @import\a   portfolio\\portfolio.scss 2:9                 @import\a   index.scss 2:9                               root stylesheet";
 }

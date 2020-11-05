@@ -1,17 +1,37 @@
 @import './githubLink.scss';
 
 .introduction{
-    width: 380px;
-    padding: 40px;
+    width: 360px;
+    padding: 40px 30px;
     display: grid;
-    grid-auto-columns: 1fr;
+    justify-items: start;
     grid-template-rows: 2fr 5fr 3fr 1fr;
+    @media screen and (max-width:$screen1368){
+        grid-auto-columns: 10fr 1fr;
+        grid-template-rows:auto;
+        width: 100%;
 
-   
+        p{
+            margin-top: 15px;
+            grid-row: 3/4;
+            grid-column: 1/3;
+        
+        }
+        .web-list-nav{
+            display: none;
+        }
+    }
+    @media screen and (max-width:$ipad){
+        font-size: 13px;
+    }
+
     .web-list-nav{
-
-
+        font-size: 18px;
+        padding-left: 10px;
         li{
+            hr{
+                margin:0 20px;
+            }
             opacity: 0.5;
             cursor: pointer;
             transform-origin: 15%;
@@ -27,10 +47,12 @@
             
         }
 
+    }
+
 
     & > :last-child{
    
-
+        align-self: flex-end;
 
     }
 
