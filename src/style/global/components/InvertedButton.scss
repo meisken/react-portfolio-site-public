@@ -44,7 +44,7 @@
             transition: 0.5s ease-in-out;
         }
         &:hover{
-            color: white;
+            color: var(--black);
             &::after{
                 
                 transform: scale(6);

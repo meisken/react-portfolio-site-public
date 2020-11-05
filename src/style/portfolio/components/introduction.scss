@@ -1,58 +1,58 @@
-@import './githubLink.scss';
 
+@import '../../variables/screenSize';
 .introduction{
     width: 360px;
     padding: 40px 30px;
-    display: grid;
-    justify-items: start;
-    grid-template-rows: 2fr 5fr 3fr 1fr;
-    @media screen and (max-width:$screen1368){
-        grid-auto-columns: 10fr 1fr;
-        grid-template-rows:auto;
-        width: 100%;
 
+    /*display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;*/
+    display: grid;
+    grid-template-rows: 3.5fr 7fr 10fr ;
+    justify-items: start;
+ 
+    background:linear-gradient(rgba( #000000, 0.835) 0%, rgba( #000000, 0.835) 100%),url('../img/portfolio_bg.JPG');
+    
+    p{
+        align-self: flex-start;
+
+      
+  
+    }
+    .social-media-links{
+
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+
+        grid-gap: 20px;
+    }
+    @media screen and (max-width:$screen1368){
+
+        width: 100%;
+        grid-template-rows:unset;
         p{
-            margin-top: 15px;
-            grid-row: 3/4;
-            grid-column: 1/3;
-        
+            margin: 20px 0 25px 0;
         }
-        .web-list-nav{
-            display: none;
+ /*       grid-template-columns: 5fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        p{
+            margin:0;
+            grid-row: 2/3;
+            grid-column: 1/4;
         }
+*/
     }
     @media screen and (max-width:$ipad){
         font-size: 13px;
     }
 
-    .web-list-nav{
-        font-size: 18px;
-        padding-left: 10px;
-        li{
-            hr{
-                margin:0 20px;
-            }
-            opacity: 0.5;
-            cursor: pointer;
-            transform-origin: 15%;
-           
-            transform: scale(0.9);
-            &:hover{
-                transform: scale(1.1);
-           
-                opacity: 1;
-            
-            }
-   
-            
-        }
 
-    }
 
 
     & > :last-child{
-   
         align-self: flex-end;
+
 
     }
 
