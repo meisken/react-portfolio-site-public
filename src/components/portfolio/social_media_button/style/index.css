@@ -1,0 +1,20 @@
+.social-media-button{
+    display: inline-flex;
+    background: #E6E6E6;
+    padding: 7.5px 17.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    user-select: none;
+ 
+}
+.social-media-button .media-icon{
+    width: 20px;
+    margin-right: 10px;
+
+}
+.social-media-button .media-name{
+
+    font-size: 15.5px;
+    color: black;
+ 
+}

@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import WebCard from './web_card/WebCard'
-import GithubLink from './github_link/GithubLink'
+import SocialMediaButton from './social_media_button/SocialMediaButton'
 
 
 
@@ -13,7 +13,7 @@ export default function Portfolio() {
         {num:"01",heading:"Audio Streaming",segment:"A hand picked list of 12 best free website mockup templates with high",imgPath:require('../../img/audio.png')}
     ]);
     return (
-        <div className="Portfolio flex justify-center">
+        <div className="Portfolio">
 
             <div className="introduction">
      
@@ -32,7 +32,7 @@ export default function Portfolio() {
 
                 </ul>
 
-                <GithubLink />
+                <SocialMediaButton />
 
             </div>
             {webs.map( ({num,heading,segment,imgPath},index) => {
