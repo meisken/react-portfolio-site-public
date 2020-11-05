@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 export default function WebCard({num,heading,segment,imgPath}) {
     return (
         <div className="web-card all-center">
-            <div className="description">
-                <h1 className="SegoeUI-font bold">{num}</h1>
+            <div>
+                <h1 className="SegoeUI-font bold mb-35">{num}</h1>
                 <h2 className="Javanese-text-font">{heading}</h2>
-                <p className="SegoeUI-font light ">{segment}</p>
+                <p className="SegoeUI-font light mb-40 ">{segment}</p>
             </div>
             <img className="cover-photo" src={imgPath} />
         </div>

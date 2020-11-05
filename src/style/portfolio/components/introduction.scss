@@ -1,29 +1,31 @@
+@import './githubLink.scss';
 
-@import '../../variables/screenSize';
 .introduction{
-    width: 360px;
-    padding: 40px 30px;
-    height: 100%;
+    width: 380px;
+    padding: 40px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 2fr 5fr 3fr 1fr;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    p{
-        margin: 30px 0 35px 0;
-    }
-    @media screen and (max-width:$screen1368){
-
-        width: 100%;
+   
+    .web-list-nav{
 
 
-
-    }
-    @media screen and (max-width:$ipad){
-        font-size: 13px;
-    }
-
-
+        li{
+            opacity: 0.5;
+            cursor: pointer;
+            transform-origin: 15%;
+           
+            transform: scale(0.9);
+            &:hover{
+                transform: scale(1.1);
+           
+                opacity: 1;
+            
+            }
+   
+            
+        }
 
 
     & > :last-child{
