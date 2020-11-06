@@ -1,0 +1,29 @@
+@import '../../variables/screenSize';
+
+.feature{
+    & > article{
+        margin-top: 100px;
+        padding: 0 40px;
+        p{
+            margin:20px 0 65px 0;
+        }
+    }
+    @media screen and(max-width:$screen1024){
+        padding: 0 20px;
+        & > article{
+      
+            padding: 0px;
+            p{
+            
+            }
+        }
+    }
+    @media screen and(max-width:$ipad){
+        font-size: 15px;
+        
+    }
+    @media screen and(max-width:$phone){
+        font-size: 13px;
+        
+    }
+}

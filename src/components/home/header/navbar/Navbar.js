@@ -27,7 +27,7 @@ export default function Navbar() {
         <nav className="navbar">
             <ul onMouseMove={cursorPosition} className={ menuActive ? "opened" : ""}>
 
-                {routes.map((route,index) => {
+                {routes && routes.map((route,index) => {
 
                     return (<li onMouseMove={shakeAnimation} onMouseLeave={shakeAnimation} key={index} ><a href="#">{route}</a></li>)
                 })}

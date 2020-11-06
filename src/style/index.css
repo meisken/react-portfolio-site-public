@@ -622,6 +622,11 @@
   background-position: 27.5%;
   z-index: -1;
 }
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .about-me {
+    padding: 0 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .about-me {
     padding: 40px;
@@ -662,6 +667,32 @@
   }
 }
 
+.feature > article {
+  margin-top: 100px;
+  padding: 0 40px;
+}
+.feature > article p {
+  margin: 20px 0 65px 0;
+}
+@media screen and (max-width: 1024px) {
+  .feature {
+    padding: 0 20px;
+  }
+  .feature > article {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .feature {
+    font-size: 13px;
+  }
+}
+
 .underline-small-title {
   display: inline-block;
   z-index: 1;
@@ -675,15 +706,62 @@
   width: 67.5%;
 }
 
+.subsegment {
+  padding: 0 40px;
+}
+.subsegment li {
+  display: flex;
+  justify-items: start;
+  align-items: start;
+}
+.subsegment li .index {
+  margin-right: 30px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.subsegment li .index::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  bottom: -10px;
+  right: -10px;
+  background: var(--blue);
+  z-index: -1;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .subsegment {
+    padding: 0 10px;
+  }
+  .subsegment li {
+    flex-direction: column;
+  }
+  .subsegment li .index {
+    margin-bottom: 30px;
+    margin-right: 0px;
+    background: var(--blue);
+    padding: 7.5px 10px;
+    border-radius: 50%;
+  }
+  .subsegment li .index::before {
+    display: none;
+  }
+}
+
 .about {
   max-width: 1280px;
   margin: 100px auto 0 auto;
   background: var(--dark-blue);
   padding: 75px 0px;
 }
-.about .wrapper {
+.about .hero-section, .about .feature-section {
   margin: 0 auto;
   max-width: 1024px;
+}
+.about .feature-section {
+  margin-top: 150px;
 }
 
 *, *::before, *::after {

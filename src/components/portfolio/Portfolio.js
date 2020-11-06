@@ -27,7 +27,7 @@ export default function Portfolio() {
 
 
             </div>
-            {webs.map( ({num,heading,segment,videoPath,poster},index) => {
+            {webs && webs.map( ({num,heading,segment,videoPath,poster},index) => {
   
                 return <WebCard key={index} num={num} heading={heading + " Website"} segment={segment} videoPath={videoPath} poster={poster} />
             })}

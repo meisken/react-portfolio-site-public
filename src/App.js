@@ -22,8 +22,8 @@ function App() {
     <div className="App">
       <Home></Home>
       <WhatIDo></WhatIDo>
-     <Portfolio></Portfolio>
-     <About></About>
+      <Portfolio></Portfolio>
+      <About></About>
     </div>
   );
 }

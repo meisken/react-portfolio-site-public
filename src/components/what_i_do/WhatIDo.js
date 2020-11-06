@@ -11,7 +11,7 @@ export default function WhatIDo() {
             <div className="wrapper">
                 <h3 className="title Consolas-font bold">What I Do</h3>
                 <div className="content">
-                    {segments.map(({imgSrc,heading,detail},index) => {
+                    {segments && segments.map(({imgSrc,heading,detail},index) => {
                         return(
                             <Segment key={index} imgSrc={imgSrc} heading={heading} detail={detail}></Segment>
                         )

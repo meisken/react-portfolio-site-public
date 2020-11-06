@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Title() {
+export default function Title({children}) {
     return (
         <div className="underline-small-title">
-            <h6 className="SegoeUI-font regular">About me</h6>
+            <h6 className="SegoeUI-font regular">{children}</h6>
             <hr/>
         </div>
     )

@@ -34,6 +34,9 @@
         
         z-index: -1;
     }
+    @media screen and(max-width:$screen1024) and (min-width:$ipad){
+        padding: 0 20px;
+    }
     @media screen and(max-width:$ipad){
         padding: 40px;
         font-size: 15px;
