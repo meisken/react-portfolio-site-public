@@ -29,10 +29,10 @@
             opacity: #{($i - 1 ) * 0.15 + 0.3}
         }
     }
-    .cover-photo{
+    .showcase-video{
         width:100%;
         align-self: center;
-        
+        object-fit: cover;
     }
     @media screen and (max-width:$screen1368) {
         width: 100%;
@@ -58,7 +58,7 @@
                 }
             }
     
-            .cover-photo{
+            .showcase-video{
                 width:auto;
                 max-width: 35%;
        

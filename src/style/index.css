@@ -31,9 +31,10 @@
 .web-card:nth-child(4)::after {
   opacity: 0.6;
 }
-.web-card .cover-photo {
+.web-card .showcase-video {
   width: 100%;
   align-self: center;
+  object-fit: cover;
 }
 @media screen and (max-width: 1368px) {
   .web-card {
@@ -55,7 +56,7 @@
     margin: 0px;
     font-size: 1.75em;
   }
-  .web-card .cover-photo {
+  .web-card .showcase-video {
     width: auto;
     max-width: 35%;
   }
@@ -590,6 +591,99 @@
 }
 .inverted-button h6 {
   z-index: 1;
+}
+
+.about-me {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.about-me .hero {
+  margin-top: 60px;
+  padding: 0 0 0 20px;
+  max-width: 700px;
+}
+.about-me .hero h3 {
+  line-height: 80px;
+}
+.about-me .hero p {
+  margin: 30px 0 50px 0;
+  width: 60%;
+}
+.about-me::before {
+  position: absolute;
+  right: 0%;
+  left: 50%;
+  top: 80px;
+  bottom: -30px;
+  content: "";
+  background: url("../img/about_me_hero_img.jpeg");
+  background-size: cover;
+  background-position: 27.5%;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .about-me {
+    padding: 40px;
+    font-size: 15px;
+  }
+  .about-me .hero {
+    padding: 20px 0 20px 0px;
+    margin-top: 150px;
+    max-width: 700px;
+  }
+  .about-me .hero h3 {
+    line-height: 72.5px;
+  }
+  .about-me .hero p {
+    margin: 30px 0 50px 0;
+    width: 100%;
+  }
+  .about-me::before {
+    top: 0%;
+    bottom: 0;
+    left: 0;
+    height: 750px;
+    background: linear-gradient(rgba(5, 23, 34, 0.4) 0%, rgba(5, 23, 34, 0.7) 100%), url("../img/about_me_hero_img.jpeg");
+    background-position: -250px center;
+    background-size: auto 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about-me {
+    padding: 20px;
+    font-size: 13px;
+  }
+  .about-me .hero {
+    margin-top: 75px;
+  }
+  .about-me .hero h3 {
+    line-height: 67.5px;
+  }
+}
+
+.underline-small-title {
+  display: inline-block;
+  z-index: 1;
+}
+.underline-small-title hr {
+  margin: 2.5px 0 0 0;
+  padding: 0;
+  border: 0;
+  background: var(--blue);
+  height: 3px;
+  width: 67.5%;
+}
+
+.about {
+  max-width: 1280px;
+  margin: 100px auto 0 auto;
+  background: var(--dark-blue);
+  padding: 75px 0px;
+}
+.about .wrapper {
+  margin: 0 auto;
+  max-width: 1024px;
 }
 
 *, *::before, *::after {

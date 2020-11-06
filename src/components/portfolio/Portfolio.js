@@ -8,9 +8,9 @@ import SocialMediaButton from './social_media_button/SocialMediaButton'
 export default function Portfolio() {
     
     const [webs,setWebs] = useState([
-        {num:"01",heading:"Audio Streaming",segment:"A hand picked list of 12 best free website mockup templates with high",imgPath:require('../../img/audio.png')},
-        {num:"01",heading:"Audio Streaming",segment:"A hand picked list of 12 best free website mockup templates with high",imgPath:require('../../img/audio.png')},
-        {num:"01",heading:"Audio Streaming",segment:"A hand picked list of 12 best free website mockup templates with high",imgPath:require('../../img/audio.png')}
+        {num:"01",heading:"Audio Streaming",segment:"A hand picked list of 12 best free website mockup templates with high",videoPath:require('../../video/audio_website.mp4'),poster:require('../../img/audio.png')},
+        {num:"01",heading:"Audio Streaming",segment:"A hand picked list of 12 best free website mockup templates with high",videoPath:require('../../video/audio_website.mp4'),poster:require('../../img/audio.png')},
+        {num:"01",heading:"Audio Streaming",segment:"A hand picked list of 12 best free website mockup templates with high",videoPath:require('../../video/audio_website.mp4'),poster:require('../../img/audio.png')}
     ]);
     return (
         <div className="Portfolio">
@@ -27,9 +27,9 @@ export default function Portfolio() {
 
 
             </div>
-            {webs.map( ({num,heading,segment,imgPath},index) => {
-                console.log(num,heading,segment,imgPath);
-                return <WebCard key={index} num={num} heading={heading + " Website"} segment={segment} imgPath={imgPath} />
+            {webs.map( ({num,heading,segment,videoPath,poster},index) => {
+  
+                return <WebCard key={index} num={num} heading={heading + " Website"} segment={segment} videoPath={videoPath} poster={poster} />
             })}
       
         </div>

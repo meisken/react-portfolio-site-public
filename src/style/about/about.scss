@@ -1,0 +1,16 @@
+@import './components/about_me.scss';
+@import './components/feature.scss';
+@import '../variables/screenSize';
+@import './components/underline_title.scss';
+.about{
+    max-width: 1280px;
+    margin: 100px auto 0 auto;
+
+    background: var(--dark-blue);
+    padding: 75px 0px;
+    .wrapper{
+        margin: 0 auto;
+        max-width: 1024px;
+    }
+
+}

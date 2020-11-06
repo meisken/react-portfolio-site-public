@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-export default function WebCard({num,heading,segment,imgPath}) {
+export default function WebCard({num,heading,segment,videoPath,poster}) {
     return (
         <div className="web-card all-center">
             <div className="description">
@@ -8,7 +8,7 @@ export default function WebCard({num,heading,segment,imgPath}) {
                 <h2 className="Javanese-text-font">{heading}</h2>
                 <p className="SegoeUI-font light ">{segment}</p>
             </div>
-            <img className="cover-photo" src={imgPath} />
+            <video controls poster={poster} className="showcase-video" src={videoPath} type="video/mp4"/>
         </div>
     )
 }
