@@ -5,6 +5,8 @@
     cursor: pointer;
     border-radius: 2px;
     user-select: none;
+    align-items: center;
+    justify-content: center;
     
 }
 .social-media-button .media-icon{
