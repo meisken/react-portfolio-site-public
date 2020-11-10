@@ -1,4 +1,4 @@
-@import '../../variables/screenSize';
+    @import '../../variables/screenSize';
 .web-card{
     width: 340px;
 
@@ -12,6 +12,12 @@
     }
     p{
         margin-bottom: 40px;
+        a{
+            color: var(--light-blue);
+            &:hover{
+                border-bottom: 0.5px solid var(--light-blue);
+            }
+        }
     }
     &::after{
         content: '';
@@ -31,7 +37,7 @@
     }
     .showcase-video{
         width:100%;
-        align-self: center;
+      
         object-fit: cover;
     }
     @media screen and (max-width:$screen1368) {
@@ -62,24 +68,33 @@
                 width:auto;
                 max-width: 35%;
        
-    
+                align-self: center;
                 
             }
         }
 
-        @media screen and (max-width:$ipad){
-            flex-direction: column;
-            max-width: 400px;
-            p{
-          
-                font-size: 1.5em;
-           
-            }
-            h2{
-                line-height: 75px !important;
-            
-            }
 
+
+    }
+    @media screen and (max-width:$ipad){
+        flex-direction: column;
+  
+        width: 100%;
+        p{
+      
+            font-size: 1.5em;
+       
+        }
+        h2{
+            line-height: 75px !important;
+        
+        }
+        .showcase-video{
+            width:auto;
+            max-width: 350px;
+   
+
+            
         }
 
     }

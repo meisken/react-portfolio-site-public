@@ -1,0 +1,31 @@
+@import './components/poster.scss';
+@import './components/postcard.scss';
+@import './components/contact_form.scss';
+@import './components/contact_information.scss';
+@import '../variables/screenSize';
+.contact-container{
+    margin-top: 100px;
+    @media screen and (max-width:$screen1368){
+
+        font-size: 15.25px;
+        margin-top: 0px;
+    }
+    @media screen and (max-width:$screen1024){
+   
+        font-size: 14.25px;
+
+
+    }
+    @media screen and (max-width:$ipad){
+
+    
+
+        font-size: 13.85px;
+
+        
+    }
+    @media screen and (max-width:$phone){
+
+        font-size: 13.5px;
+    }
+}

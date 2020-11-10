@@ -1,12 +1,11 @@
 .social-media-button{
     display: inline-flex;
-
+    justify-content: center;
+    align-items: center;
     padding: 6.25px 15px;
     cursor: pointer;
     border-radius: 2px;
     user-select: none;
-    align-items: center;
-    justify-content: center;
     
 }
 .social-media-button .media-icon{
@@ -17,6 +16,6 @@
 .social-media-button .media-name{
 
     font-size: 14px;
-
+ 
  
 }

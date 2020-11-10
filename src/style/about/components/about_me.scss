@@ -1,5 +1,5 @@
 @import '../../variables/screenSize';
-
+@import '../../variables/colors';
 .about-me{
 
     position: relative;
@@ -39,6 +39,7 @@
     }
     @media screen and(max-width:$ipad){
         padding: 40px;
+   
         font-size: 15px;
         .hero{
             padding: 20px 0 20px 0px;
@@ -59,7 +60,7 @@
             bottom: 0;
             left: 0;
             height: 750px;
-            background: linear-gradient(rgba( #051722, 0.4   ) 0%, rgba(  #051722, 0.7) 100%),url("../img/about_me_hero_img.jpeg");
+            background: linear-gradient(rgba($dark-blue, 0.4   ) 0%, rgba(  $dark-blue, 0.7) 100%),url("../img/about_me_hero_img.jpeg");
             background-position: -250px center;
             background-size: auto 100%;
         }

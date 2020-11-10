@@ -5,7 +5,7 @@ import Headline from './headline/Headline'
 export default function Home() {
 
     return (
-        <div className="home">
+        <div className="home" id="home-page">
             <div className="hero-wrapper">
                 <Header></Header>
                 <div className="hero-body">

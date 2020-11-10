@@ -7,7 +7,7 @@ export default function WhatIDo() {
         
     ]
     return (
-        <div className="what-i-do">
+        <div className="what-i-do" id="what-i-do-page">
             <div className="wrapper">
                 <h3 className="title Consolas-font bold">What I Do</h3>
                 <div className="content">

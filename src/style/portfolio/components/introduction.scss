@@ -1,5 +1,6 @@
 
 @import '../../variables/screenSize';
+@import '../../variables/colors';
 .introduction{
     width: 360px;
     padding: 40px 30px;
@@ -12,7 +13,7 @@
     grid-template-rows: 3.5fr 7fr 10fr ;
     justify-items: start;
  
-    background:linear-gradient(rgba( #000000, 0.835) 0%, rgba( #000000, 0.835) 100%),url('../img/portfolio_bg.JPG');
+    background:linear-gradient(rgba( $black, 0.835) 0%, rgba($black, 0.835) 100%),url('../img/portfolio_bg.JPG');
     
     p{
         align-self: flex-start;

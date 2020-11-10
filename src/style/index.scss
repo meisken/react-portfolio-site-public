@@ -23,11 +23,13 @@ html{
 body{
     font-family: "Segoe UI";
     background: black;
-    margin:0 ;
+    margin:0 0 0px 0;
     padding: 0;
     color: white;
 
-
+    @media screen and(min-width:768px){
+        margin:0 0 100px 0;
+    }
 }
 
 h1{
@@ -61,7 +63,7 @@ h6{
     padding: 0;
 }
 span{
-    font-size: 0.9375em;//15px
+ 
     margin: 0;
     padding: 0;
 }
