@@ -8,14 +8,29 @@
 }
 @media screen and (min-width:1024px){
     .header-scrolling-animation{
-        transform: translateY(-150%);
-        opacity: 0.3;
-        transition: 1s;
         display: block;
+      
         &.activated{
-            transform: translateY(0%);
-            opacity: 1;
+     
+            animation: 1s side-down forwards ease-out;
+        
         }
      
+    }
+    @keyframes side-down {
+        0%{
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        30%{
+            opacity: 0;
+        }
+        99%{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+        100%{
+            transform: unset;
+        }
     }
 }
