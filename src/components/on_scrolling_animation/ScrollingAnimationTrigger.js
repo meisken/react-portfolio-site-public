@@ -14,14 +14,16 @@ export default function ScrollingAnimationTrigger({children,beforeActivateClassN
         
           
            // if(top - window.innerHeight  <= 0 - height/2 && top > 0 ){
-            
+        
             if((top - window.innerHeight  <= 0 - height/2 && top > 0 ) || (offsetTop <= window.innerHeight && window.pageYOffset < window.innerHeight)){
                 resolve();
-                console.log(top,offsetTop,element);
+     
               
-            }else{
+            }
+            if(top - window.innerHeight  > 0){
                 reject();
             }
+
         })
         return result
 

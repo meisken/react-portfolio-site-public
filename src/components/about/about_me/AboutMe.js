@@ -5,7 +5,7 @@ export default function AboutMe() {
     return (
         <div className="about-me">
             
-            <Title>About me</Title>
+            <Title key="1">About me</Title>
 
            
             <div className="hero">
