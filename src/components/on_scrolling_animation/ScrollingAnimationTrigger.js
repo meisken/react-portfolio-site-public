@@ -52,8 +52,8 @@ export default function ScrollingAnimationTrigger({children,beforeActivateClassN
 
 
     return (
-        <span ref={el} className={beforeActivateClassName + (activation ? " activated" : "")}>
+        <div ref={el} className={beforeActivateClassName + (activation ? " activated" : "")}>
             {children}
-        </span>
+        </div>
     )
 }

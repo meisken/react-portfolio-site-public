@@ -73,7 +73,7 @@
     width: 100%;
   }
   .web-card p {
-    font-size: 1.5em;
+    font-size: 1.625em;
   }
   .web-card h2 {
     line-height: 75px !important;
@@ -421,32 +421,34 @@
     display: none;
   }
 }
-.headline .headline-text-scrolling-animation {
-  display: block;
-  opacity: 0;
-  transition: 1.25s ease-out 0.75s transform, 1.25s ease-out 0.75s opacity;
-}
-.headline .headline-text-scrolling-animation.activated {
-  opacity: 1;
-}
-.headline .headline-underline-scrolling-animation {
-  display: block;
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: 1s ease-out 2s transform, 1s ease-out 2s opacity;
-}
-.headline .headline-underline-scrolling-animation.activated {
-  transform: scaleX(1);
-}
-.headline .headline-button-scrolling-animation {
-  display: block;
-  opacity: 0;
-  transform: translateY(50%);
-  transition: 1.25s ease-out 1.25s transform, 1.25s ease-out 1.25s opacity;
-}
-.headline .headline-button-scrolling-animation.activated {
-  opacity: 1;
-  transform: translateY(0%);
+@media screen and (min-width: 1024px) {
+  .headline .headline-text-scrolling-animation {
+    display: block;
+    opacity: 0;
+    transition: 1.25s ease-out 0.75s transform, 1.25s ease-out 0.75s opacity;
+  }
+  .headline .headline-text-scrolling-animation.activated {
+    opacity: 1;
+  }
+  .headline .headline-underline-scrolling-animation {
+    display: block;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 1s ease-out 2s transform, 1s ease-out 2s opacity;
+  }
+  .headline .headline-underline-scrolling-animation.activated {
+    transform: scaleX(1);
+  }
+  .headline .headline-button-scrolling-animation {
+    display: block;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: 1.25s ease-out 1.25s transform, 1.25s ease-out 1.25s opacity;
+  }
+  .headline .headline-button-scrolling-animation.activated {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 .header {
@@ -660,15 +662,17 @@
   z-index: 1;
   width: 100%;
 }
-.about-me .about-hero-scrolling-animation {
-  display: block;
-  opacity: 0;
-  transform: translate(-5%, 5%);
-  transition: 1s ease-out;
-}
-.about-me .about-hero-scrolling-animation.activated {
-  opacity: 1;
-  transform: translate(0%, 0%);
+@media screen and (min-width: 1024px) {
+  .about-me .about-hero-scrolling-animation {
+    display: block;
+    opacity: 0;
+    transform: translate(-5%, 5%);
+    transition: 1s ease-out;
+  }
+  .about-me .about-hero-scrolling-animation.activated {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
 }
 .about-me .hero {
   margin-top: 60px;
@@ -767,30 +771,35 @@
 
 .about-title-scrolling-animation {
   display: inline-block;
-  transform: scaleX(0);
-  transform-origin: left;
-  position: relative;
-  overflow: hidden;
-}
-.about-title-scrolling-animation::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--blue);
-  transform-origin: right;
-}
-.about-title-scrolling-animation.activated {
-  transition: 0.5s ease-in-out transform;
-  transform: scaleX(1);
-}
-.about-title-scrolling-animation.activated::before {
-  transition: 0.5s ease-in-out 0.5s;
-  transform: scaleX(0);
 }
 
+@media screen and (min-width: 1024px) {
+  .about-title-scrolling-animation {
+    display: inline-block;
+    transform: scaleX(0);
+    transform-origin: left;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-title-scrolling-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--blue);
+    transform-origin: right;
+  }
+  .about-title-scrolling-animation.activated {
+    transition: 0.5s ease-in-out transform;
+    transform: scaleX(1);
+  }
+  .about-title-scrolling-animation.activated::before {
+    transition: 0.5s ease-in-out 0.5s;
+    transform: scaleX(0);
+  }
+}
 .underline-small-title {
   display: inline-block;
   z-index: 1;
@@ -968,6 +977,9 @@
   .postcard .side-left .background-circuit {
     left: -150px;
     bottom: -35%;
+  }
+  .postcard .side-left h1 {
+    font-size: 5.3em;
   }
 }
 @media screen and (max-width: 480px) {

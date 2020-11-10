@@ -1,31 +1,39 @@
+@import '../../variables//screenSize';
+
 .about-title-scrolling-animation{
     display: inline-block;
-    transform: scaleX(0);
-    transform-origin: left;
-
-    position: relative;
-    overflow: hidden;
-    &::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: var(--blue);
-        transform-origin: right;
-
-
-    }
-    &.activated{
-        transition: 0.5s ease-in-out transform;
-        transform: scaleX(1);
+}
+@media screen and (min-width:$screen1024){
+    .about-title-scrolling-animation{
+        display: inline-block;
+        transform: scaleX(0);
+        transform-origin: left;
+    
+        position: relative;
+        overflow: hidden;
         &::before{
-            transition: 0.5s ease-in-out 0.5s;
-            transform: scaleX(0);
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--blue);
+            transform-origin: right;
+    
+    
+        }
+        &.activated{
+            transition: 0.5s ease-in-out transform;
+            transform: scaleX(1);
+            &::before{
+                transition: 0.5s ease-in-out 0.5s;
+                transform: scaleX(0);
+            }
         }
     }
 }
+
 
 .underline-small-title{
     
