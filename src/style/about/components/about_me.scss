@@ -7,36 +7,33 @@
     width: 100%;
 
     .hero{
-        .wrapper{
-            margin-top: 60px;
-            padding: 0 0 0 20px;
-            max-width:700px ;
+        margin-top: 60px;
+        padding: 0 0 0 20px;
+        max-width:700px ;
         
-            h3{
-            
-                line-height:80px;
-            }
-            p{
-                margin: 30px 0 50px 0;
-                width: 60%;
-            }
+        h3{
+        
+            line-height:80px;
         }
-        &::before{
-            position: absolute;
-            right: 0%;
-            left: 50%;
-            top: 80px;
-            bottom: -30px;
-            content: '';
-            background: url("../img/about_me_hero_img.jpeg");
-            background-size: cover;
-            background-position: 27.5%;
-            
-            
-            z-index: -1;
+        p{
+            margin: 30px 0 50px 0;
+            width: 60%;
         }
     }
-
+    &::before{
+        position: absolute;
+        right: 0%;
+        left: 50%;
+        top: 80px;
+        bottom: -30px;
+        content: '';
+        background: url("../img/about_me_hero_img.jpeg");
+        background-size: cover;
+        background-position: 27.5%;
+        
+        
+        z-index: -1;
+    }
     @media screen and(max-width:$screen1024) and (min-width:$ipad){
         padding: 0 20px;
     }
@@ -45,45 +42,40 @@
    
         font-size: 15px;
         .hero{
-            .wrapper{
-                padding: 20px 0 20px 0px;
-                margin-top: 150px;
-                max-width:700px ;
-        
-                h3{
-                
-                    line-height:72.5px;
-                }
-                p{
-                    margin: 30px 0 50px 0;
-                    width: 100%;
-                }
+            padding: 20px 0 20px 0px;
+            margin-top: 150px;
+            max-width:700px ;
+    
+            h3{
+            
+                line-height:72.5px;
             }
-            &::before{
-                top:0%;
-                bottom: 0;
-                left: 0;
-                height: 750px;
-                background: linear-gradient(rgba($dark-blue, 0.4   ) 0%, rgba(  $dark-blue, 0.7) 100%),url("../img/about_me_hero_img.jpeg");
-                background-position: -250px center;
-                background-size: auto 100%;
+            p{
+                margin: 30px 0 50px 0;
+                width: 100%;
             }
         }
- 
+        &::before{
+            top:0%;
+            bottom: 0;
+            left: 0;
+            height: 750px;
+            background: linear-gradient(rgba($dark-blue, 0.4   ) 0%, rgba(  $dark-blue, 0.7) 100%),url("../img/about_me_hero_img.jpeg");
+            background-position: -250px center;
+            background-size: auto 100%;
+        }
     }
     @media screen and(max-width:$phone){
         padding: 20px;
         font-size: 13px;
+  
         .hero{
-            .wrapper{
-                margin-top: 75px;
-                h3{
-                
-                    line-height:67.5px;
-                }
+            margin-top: 75px;
+            h3{
+            
+                line-height:67.5px;
             }
         }
-
     }
 
 }

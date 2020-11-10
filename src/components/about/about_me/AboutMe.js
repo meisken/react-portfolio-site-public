@@ -9,12 +9,10 @@ export default function AboutMe() {
 
            
             <div className="hero">
-                <div className="wrapper">
-                    <h3 className="SegoeUI-font semibold">I'm Ken Tang<br/>I'm Web Developer<br/>I can build you a wonderful website</h3>
-                    <p className="SegoeUI-font light">I love using technology and building beautiful things.</p>
-                    <InvertedButton>download my resume</InvertedButton>
-                </div>
-
+                
+                <h3 className="SegoeUI-font semibold">I'm Ken Tang<br/>I'm Web Developer<br/>I can build you a wonderful website</h3>
+                <p className="SegoeUI-font light">I love using technology and building beautiful things.</p>
+                <InvertedButton>download my resume</InvertedButton>
             </div>
 
         </div>
