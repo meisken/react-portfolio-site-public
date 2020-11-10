@@ -5,14 +5,11 @@ import WhatIDo from './components/what_i_do/WhatIDo'
 import About from './components/about/About'
 import Contact from './components/contact/Contact'
 import './style/index.css'
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
   useEffect(() => {
-    AOS.init({
-      duration:1000
-    });
+
     const oneHundredVh = () => {
       document.documentElement.style.setProperty('--100vh', `${window.innerHeight}px`)
     }

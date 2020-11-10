@@ -1,6 +1,6 @@
 import React,{useEffect,useState,useRef} from 'react'
 
-export default function ScrollingAnimationTrigger({children,activatedClassName,leavingReset}) {
+export default function ScrollingAnimationTrigger({children,beforeActivateClassName,leavingReset}) {
 
     const el = useRef(null);
     const [activation,setActivation] = useState(false);
@@ -10,9 +10,10 @@ export default function ScrollingAnimationTrigger({children,activatedClassName,l
         let result = new Promise((resolve,reject) => {
   
             let {top,height} = element.getBoundingClientRect();
+            let {offsetTop} = element;
         
         
-            if(top - window.innerHeight  <= 0 - height/2 && top > 0 ){
+            if(offsetTop - window.innerHeight  <= 0 - height/2 && offsetTop > 0 ){
       
      
                 resolve();
@@ -48,7 +49,7 @@ export default function ScrollingAnimationTrigger({children,activatedClassName,l
 
 
     return (
-        <span ref={el} className={activatedClassName + (activation ? " activated" : "")}>
+        <span ref={el} className={beforeActivateClassName + (activation ? " activated" : "")}>
             {children}
         </span>
     )

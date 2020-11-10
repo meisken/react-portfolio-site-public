@@ -32,4 +32,35 @@
             display: none;
         }
     }
+
+
+
+    .headline-text-scrolling-animation{
+        display: inline-block;
+        opacity: 0;
+        transition:1.25s ease-out 0.75s;
+        &.activated{
+            opacity: 1;
+        }
+    }
+    .headline-underline-scrolling-animation{
+
+        display: block;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition:1s ease-out 2s;
+        &.activated{
+            transform: scaleX(1);
+        }
+    }
+    .headline-button-scrolling-animation{
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(50%);
+        transition:1.25s ease-out 1.25s;
+        &.activated{
+            opacity:1;
+            transform: translateY(0%);
+        }
+    }
 }
