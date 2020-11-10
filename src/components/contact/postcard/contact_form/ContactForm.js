@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { useEffect } from 'react';
 
-export default function ContactFrom() {
+export default function ContactForm() {
     const [formData,setFormData] = useState({
         name:'',
         email:'',

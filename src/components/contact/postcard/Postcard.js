@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactForm from './contact_form/ContactFrom'
+import ContactForm from './contact_form/ContactForm'
 import ContactInformation from './contact_information/ContactInformation';
 export default function Postcard() {
     return (

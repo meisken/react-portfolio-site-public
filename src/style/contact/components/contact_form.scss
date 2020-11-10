@@ -85,8 +85,19 @@
             font-size: 1.2em;
             font-family: 'Segoe UI';
             font-weight: 400;
+            transition: 0.25s linear;
             cursor: pointer;
             border-radius: 2px;
+
+            @media screen and (min-width:$ipad){
+                &:active{
+                    transform: scale(0.8);
+                }
+                &:hover{
+                    color: var(--blue);
+                    background: var(--white);
+                }
+            }
             @media screen and (max-width:$phone){
                 padding: 10px 0;
                 width: 100%;

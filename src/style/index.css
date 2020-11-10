@@ -424,7 +424,7 @@
 .headline .headline-text-scrolling-animation {
   display: block;
   opacity: 0;
-  transition: 1.25s ease-out 0.75s;
+  transition: 1.25s ease-out 0.75s transform, 1.25s ease-out 0.75s opacity;
 }
 .headline .headline-text-scrolling-animation.activated {
   opacity: 1;
@@ -433,16 +433,16 @@
   display: block;
   transform-origin: left;
   transform: scaleX(0);
-  transition: 1s ease-out 2s;
+  transition: 1s ease-out 2s transform, 1s ease-out 2s opacity;
 }
 .headline .headline-underline-scrolling-animation.activated {
   transform: scaleX(1);
 }
 .headline .headline-button-scrolling-animation {
-  display: inline-block;
+  display: block;
   opacity: 0;
   transform: translateY(50%);
-  transition: 1.25s ease-out 1.25s;
+  transition: 1.25s ease-out 1.25s transform, 1.25s ease-out 1.25s opacity;
 }
 .headline .headline-button-scrolling-animation.activated {
   opacity: 1;
@@ -1049,8 +1049,18 @@
   font-size: 1.2em;
   font-family: "Segoe UI";
   font-weight: 400;
+  transition: 0.25s linear;
   cursor: pointer;
   border-radius: 2px;
+}
+@media screen and (min-width: 768px) {
+  .contact-form form button:active {
+    transform: scale(0.8);
+  }
+  .contact-form form button:hover {
+    color: var(--blue);
+    background: var(--white);
+  }
 }
 @media screen and (max-width: 480px) {
   .contact-form form button {
