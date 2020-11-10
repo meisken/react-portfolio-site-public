@@ -1,9 +1,9 @@
 import React,{useEffect,useState,useRef} from 'react'
 
-export default function ScrollingAnimationTrigger({children}) {
+export default function ScrollingAnimationTrigger({children,activatedClassName,leavingReset}) {
 
     const el = useRef(null);
-
+    const [activation,setActivation] = useState(false);
 
     const checkPosition = (element) => {
         
@@ -28,28 +28,28 @@ export default function ScrollingAnimationTrigger({children}) {
     let eventHandler = async () => {
         try{
             let result = await checkPosition(el.current);
-          
-            console.log('a');
+            setActivation(true)
+     
         }catch(err){
 
-            /*if(leavingReset){
+            if(leavingReset){
 
-               setScrollClass('')
-            }*/
+                setActivation(false)
+            }
         }
     }
     useEffect(() => {
         eventHandler()
         window.addEventListener("scroll",eventHandler);
-        return function cleanup() {
+        return  () => {
             window.removeEventListener("scroll",eventHandler);
         };
     },[])
 
 
     return (
-        <div>
+        <span ref={el} className={activatedClassName + (activation ? " activated" : "")}>
             {children}
-        </div>
+        </span>
     )
 }

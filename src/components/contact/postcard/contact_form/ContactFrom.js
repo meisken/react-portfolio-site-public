@@ -9,7 +9,7 @@ export default function ContactFrom() {
     });
  
     useEffect(() => {
-        console.log(formData);
+   
     },[formData])
     const handleInput = (e) => {
    
