@@ -660,6 +660,16 @@
   z-index: 1;
   width: 100%;
 }
+.about-me .about-hero-scrolling-animation {
+  display: block;
+  opacity: 0;
+  transform: translate(-5%, 5%);
+  transition: 1s ease-out;
+}
+.about-me .about-hero-scrolling-animation.activated {
+  opacity: 1;
+  transform: translate(0%, 0%);
+}
 .about-me .hero {
   margin-top: 60px;
   padding: 0 0 0 20px;
@@ -755,14 +765,14 @@
   }
 }
 
-.about-scrolling-animation {
+.about-title-scrolling-animation {
   display: inline-block;
   transform: scaleX(0);
   transform-origin: left;
   position: relative;
   overflow: hidden;
 }
-.about-scrolling-animation::before {
+.about-title-scrolling-animation::before {
   content: "";
   position: absolute;
   top: 0;
@@ -772,11 +782,11 @@
   background: var(--blue);
   transform-origin: right;
 }
-.about-scrolling-animation.activated {
+.about-title-scrolling-animation.activated {
   transition: 0.5s ease-in-out transform;
   transform: scaleX(1);
 }
-.about-scrolling-animation.activated::before {
+.about-title-scrolling-animation.activated::before {
   transition: 0.5s ease-in-out 0.5s;
   transform: scaleX(0);
 }

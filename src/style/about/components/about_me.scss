@@ -6,6 +6,17 @@
     z-index: 1;
     width: 100%;
 
+
+    .about-hero-scrolling-animation{
+        display:block;
+        opacity: 0;
+        transform: translate(-5%,5%);
+        transition: 1s ease-out;
+        &.activated{
+            opacity: 1;
+            transform: translate(0%,0%);
+        }
+    }
     .hero{
         margin-top: 60px;
         padding: 0 0 0 20px;
