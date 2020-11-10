@@ -18,8 +18,8 @@ export default function ContactInformation() {
                 <section>
                     <h6 className="heading o-6 SegoeUI-font regular">Social Medias</h6>
                     <div className="follow-me-social-medias">
-                        <SocialMediaButton mediaName="facebook" mediaLink="#"></SocialMediaButton>
-                        <SocialMediaButton mediaName="github" mediaLink="#"></SocialMediaButton>
+                        <SocialMediaButton mediaName="facebook"></SocialMediaButton>
+                        <SocialMediaButton mediaName="github"></SocialMediaButton>
                     </div>
 
                 </section>
