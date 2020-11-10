@@ -660,19 +660,19 @@
   z-index: 1;
   width: 100%;
 }
-.about-me .hero {
+.about-me .hero .wrapper {
   margin-top: 60px;
   padding: 0 0 0 20px;
   max-width: 700px;
 }
-.about-me .hero h3 {
+.about-me .hero .wrapper h3 {
   line-height: 80px;
 }
-.about-me .hero p {
+.about-me .hero .wrapper p {
   margin: 30px 0 50px 0;
   width: 60%;
 }
-.about-me::before {
+.about-me .hero::before {
   position: absolute;
   right: 0%;
   left: 50%;
@@ -694,19 +694,19 @@
     padding: 40px;
     font-size: 15px;
   }
-  .about-me .hero {
+  .about-me .hero .wrapper {
     padding: 20px 0 20px 0px;
     margin-top: 150px;
     max-width: 700px;
   }
-  .about-me .hero h3 {
+  .about-me .hero .wrapper h3 {
     line-height: 72.5px;
   }
-  .about-me .hero p {
+  .about-me .hero .wrapper p {
     margin: 30px 0 50px 0;
     width: 100%;
   }
-  .about-me::before {
+  .about-me .hero::before {
     top: 0%;
     bottom: 0;
     left: 0;
@@ -721,10 +721,10 @@
     padding: 20px;
     font-size: 13px;
   }
-  .about-me .hero {
+  .about-me .hero .wrapper {
     margin-top: 75px;
   }
-  .about-me .hero h3 {
+  .about-me .hero .wrapper h3 {
     line-height: 67.5px;
   }
 }
