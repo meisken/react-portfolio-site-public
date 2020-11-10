@@ -20,8 +20,8 @@ export default function Portfolio() {
                 <h1 className="Consolas-font bold">Portfolio</h1>
                 <p className="SegoeUI-font regular ">These website ideas come from something which I want to use in my daily life. Therefore, They all are functional and interactive.</p>
                 <div className="social-media-links">
-                    <SocialMediaButton mediaName="github" mediaLink="#" />
-                    <SocialMediaButton mediaName="facebook" mediaLink="#" />
+                    <SocialMediaButton mediaName="github"/>
+                    <SocialMediaButton mediaName="facebook"/>
               
                 </div>
 
