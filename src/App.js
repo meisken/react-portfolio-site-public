@@ -5,7 +5,7 @@ import WhatIDo from './components/what_i_do/WhatIDo'
 import About from './components/about/About'
 import Contact from './components/contact/Contact'
 import './style/index.css'
-import 'aos/dist/aos.css';
+
 
 function App() {
   useEffect(() => {
