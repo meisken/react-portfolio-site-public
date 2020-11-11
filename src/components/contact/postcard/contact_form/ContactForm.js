@@ -30,7 +30,7 @@ export default function ContactForm() {
             email:'',
             message:''
         });
-        emailjs.send('Send_Me_Message','template_hcpyx5k',formData,'user_QT3ae5FFgatOVsHclrYV0').then(() => {
+        emailjs.send('','',formData,'').then(() => {
          
             setStatus(true);
             setStatusMessage('Sended message successful');
