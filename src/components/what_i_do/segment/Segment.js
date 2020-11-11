@@ -1,5 +1,4 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom';
 import InvertedButton from '../../global/InvertedButton'
 
 export default function Segment({imgSrc,heading,detail,learnMoreLink}) {

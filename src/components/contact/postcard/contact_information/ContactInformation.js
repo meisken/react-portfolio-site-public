@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import SocialMediaButton from '../../../portfolio/social_media_button/SocialMediaButton'
 export default function ContactInformation() {
 

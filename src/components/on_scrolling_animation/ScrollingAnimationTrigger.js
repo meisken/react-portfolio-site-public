@@ -10,7 +10,7 @@ export default function ScrollingAnimationTrigger({children,beforeActivateClassN
         let result = new Promise((resolve,reject) => {
   
             let {top,height} = element.getBoundingClientRect();
-            let {offsetTop} = element;
+           // let {offsetTop} = element;
         
 
             if(top + height/2 <= window.innerHeight && top > 0){

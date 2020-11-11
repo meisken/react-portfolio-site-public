@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './style/index.css'
-import githubIcon from "./icon/Github.svg"
 export default function SocialMediaButton({mediaName,mediaLink}) {
 
     const mediaPatterns =  {
