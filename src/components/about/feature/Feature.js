@@ -10,7 +10,7 @@ export default function Feature() {
     ]
     return (
         <div className="feature">
-                <Title key="2">{"Feature & Skills"}</Title>
+                <Title key={2}>{"Feature & Skills"}</Title>
 
                 <article>
                     <h3>Why choose me</h3>

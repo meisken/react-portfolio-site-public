@@ -1,16 +1,18 @@
-import React,{useState} from 'react'
-import { useEffect } from 'react';
-
+import React,{ useState,useEffect } from 'react'
+import {SpinnerLoader} from './loading/Loader'
+import emailjs from 'emailjs-com'
 export default function ContactForm() {
+
     const [formData,setFormData] = useState({
         name:'',
         email:'',
         message:''
     });
  
-    useEffect(() => {
-   
-    },[formData])
+    const [loading,setLoading] = useState(false);
+    const [statusMessage,setStatusMessage] =  useState('');
+    const [status,setStatus] = useState(false);
+
     const handleInput = (e) => {
    
         let newFormData = formData;
@@ -18,9 +20,31 @@ export default function ContactForm() {
    
         setFormData({...newFormData})
     }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('a');
+        setStatusMessage('');
+        setLoading(true);
+        setFormData({
+            name:'',
+            email:'',
+            message:''
+        });
+        emailjs.send('Send_Me_Message','template_hcpyx5k',formData,'user_QT3ae5FFgatOVsHclrYV0').then(() => {
+         
+            setStatus(true);
+            setStatusMessage('Sended message successful');
+        }).catch((err) => {
+            setStatus(false);
+            setStatusMessage(err);
+
+        }).finally(() => {
+            
+            setLoading(false);
+
+      
+        })
+    
     }
     return (
         <div className="contact-form">
@@ -28,23 +52,24 @@ export default function ContactForm() {
 
             <form autoComplete="off" onSubmit={handleSubmit}>
                 <div>
-                    <input type="text" id="name" onInput={handleInput} />
+                    <input type="text" id="name" onInput={handleInput} value={formData.name} required/>
                     <label htmlFor="Name" className={ formData.name !== '' ?"extended" : ""}><h6>Your Name</h6></label>
                     <div className="input_underline"></div>
                 </div>
                 <div>
-                    <input type="email" id="email" onInput={handleInput} />
+                    <input type="email" id="email" onInput={handleInput} value={formData.email} required/>
                     <label htmlFor="Email" className={ formData.email !== '' ?"extended" : ""}><h6>Email</h6></label>
                     <div className="input_underline"></div>
                 </div>
                 <div>
-                    <input type="Message" id="message" onInput={handleInput} />
+                    <input type="Message" id="message" onInput={handleInput} value={formData.message} required/>
                     <label htmlFor="Message" className={ formData.message !== '' ?"extended" : ""}><h6>Message</h6></label>
                     <div className="input_underline"></div>
                 </div>
-
-                <button>Send</button>
+                {statusMessage !== '' ? (<div className={"status-message " + (status?"success":"fail")}>{statusMessage}</div>) : null}
+                <button disabled={loading}>{loading ? <SpinnerLoader></SpinnerLoader> : "Send"}</button>
             </form>
+            
         </div>
     )
 }

@@ -889,6 +889,9 @@
   max-width: 800px;
   margin: 0 auto;
 }
+.poster h1 {
+  line-height: 70px;
+}
 .poster::before {
   position: absolute;
   content: "";
@@ -903,6 +906,9 @@
 @media screen and (max-width: 1368px) {
   .poster {
     padding: 50px 0;
+  }
+  .poster h1 {
+    line-height: 60px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1080,6 +1086,23 @@
     width: 100%;
   }
 }
+.contact-form form .status-message {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 1.35em;
+  border: 2px solid;
+}
+.contact-form form .status-message.success {
+  background: rgba(255, 255, 255, 0.1);
+  color: #24A764;
+  border-color: rgba(36, 167, 100, 0.5);
+}
+.contact-form form .status-message.fail {
+  background: rgba(255, 255, 255, 0.1);
+  color: #A72424;
+  border-color: rgba(167, 36, 36, 0.5);
+}
 
 .contact-information {
   width: 430px;
@@ -1114,6 +1137,47 @@
   .contact-information {
     width: 100%;
     padding: 0 40px;
+  }
+}
+
+.spinner-loader {
+  --size:25px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.spinner-loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: calc(var(--size) / 15) solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  z-index: -1;
+}
+.spinner-loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: calc(var(--size) / 15) solid transparent;
+  border-top-color: white;
+  animation: 0.75s linear spinning infinite;
+  border-radius: 50%;
+  z-index: 1;
+}
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

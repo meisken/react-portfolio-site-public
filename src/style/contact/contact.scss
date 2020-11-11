@@ -3,6 +3,7 @@
 @import './components/contact_form.scss';
 @import './components/contact_information.scss';
 @import '../variables/screenSize';
+@import './components/loader.scss';
 .contact-container{
     margin-top: 100px;
     @media screen and (max-width:$screen1368){

@@ -1,4 +1,5 @@
 @import '../../variables/screenSize';
+@import '../../variables/colors';
 .contact-form{
     form{
   
@@ -103,6 +104,24 @@
                 width: 100%;
             }
    
+        }
+        .status-message{
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            font-size: 1.35em;
+            border: 2px solid;
+
+            &.success{
+                background: rgba($white, 0.1);
+                color: $positive ;
+                border-color:rgba($positive ,0.5) ;
+            }
+            &.fail{
+                background: rgba($white, 0.1);
+                color: $negative ;
+                border-color:rgba($negative,0.5) ;
+            }
         }
     }
 
