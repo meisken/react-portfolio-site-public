@@ -1,0 +1,36 @@
+@import '../../variables/screenSize';
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+@media screen and (min-width:1024px){
+    .header-scrolling-animation{
+        display: block;
+      
+        &.activated{
+   
+            animation: 1s side-down forwards ease-out;
+        
+        }
+     
+    }
+    @keyframes side-down {
+        0%{
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        30%{
+            opacity: 0;
+        }
+        99%{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+        100%{
+            transform: unset;
+        }
+    }
+}

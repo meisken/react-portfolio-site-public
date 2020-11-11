@@ -1,0 +1,37 @@
+@import '../../variables/screenSize';
+
+.feature{
+    & > .about-feature-scrolling-animation{
+        margin-top: 100px;
+        padding: 0 40px;
+        @media screen and(min-width:$screen1024){
+            opacity: 0;
+            &.activated{
+                opacity: 1;
+                transition: 1s opacity ease-in-out ;
+            }
+        }
+
+        p{
+            margin:20px 0 65px 0;
+        }
+    }
+    @media screen and(max-width:$screen1024){
+        padding: 0 20px;
+        & > .about-feature-scrolling-animation{
+      
+            padding: 0px;
+            p{
+            
+            }
+        }
+    }
+    @media screen and(max-width:$ipad){
+        font-size: 15px;
+        
+    }
+    @media screen and(max-width:$phone){
+        font-size: 13px;
+        
+    }
+}

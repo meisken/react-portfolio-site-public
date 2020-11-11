@@ -1,0 +1,128 @@
+@import '../../variables/screenSize';
+@import '../../variables/colors';
+.contact-form{
+    form{
+  
+        & > div{
+            margin: 55px 0;
+            position: relative;
+            label{
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                position: absolute;
+                opacity: 0.5;
+                transition: 0.4s ease-out;
+                &.extended{
+                    transform: translateY(0%);
+                    top: -50%;
+                }
+                h6{
+                    font-weight: 400;
+                    font-family: 'Segoe UI';
+   
+                }
+            }
+            input{
+                all:unset;
+                background: none;
+                border-top:none;
+                border-right:none;
+                border-left:none;
+                outline: none;
+                width: 100%;
+                border-bottom: 1px solid #636E75;
+                display: inline-block;
+                color:inherit;
+                padding:10px 0 ;
+                position: relative;
+                font-size: 1.55em;
+                font-weight: 400;
+                font-family: 'Segoe UI';
+                appearance:none;
+                box-shadow: none;
+            
+                &:focus{
+                 
+                    & + label{
+                        transform: translateY(0%);
+                        top: -50%;
+                        opacity: 1;
+                        color: var(--light-blue);
+                        h6{
+                            
+                        }
+                    }
+                    & ~ .input_underline{
+                        transform: scaleX(1);
+                    }
+
+             
+                }
+            }
+            .input_underline{
+                position: absolute;
+   
+                height: 1px;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                background:var(--light-blue);
+                z-index: 1;
+                transform: scaleX(0);
+                transform-origin:0% ;
+                transition: 0.4s transform ease-out;
+            }
+     
+   
+        }
+        button{
+            background: var(--blue);
+            display: inline-block;
+            padding: 7.5px 50px;
+            color: var(--white);
+            border: none;
+            outline: none;
+            font-size: 1.2em;
+            font-family: 'Segoe UI';
+            font-weight: 400;
+            transition: 0.25s linear;
+            cursor: pointer;
+            border-radius: 2px;
+
+            @media screen and (min-width:$ipad){
+                &:active{
+                    transform: scale(0.8);
+                }
+                &:hover{
+                    color: var(--blue);
+                    background: var(--white);
+                }
+            }
+            @media screen and (max-width:$phone){
+                padding: 10px 0;
+                width: 100%;
+            }
+   
+        }
+        .status-message{
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            font-size: 1.35em;
+            border: 2px solid;
+
+            &.success{
+                background: rgba($white, 0.1);
+                color: $positive ;
+                border-color:rgba($positive ,0.5) ;
+            }
+            &.fail{
+                background: rgba($white, 0.1);
+                color: $negative ;
+                border-color:rgba($negative,0.5) ;
+            }
+        }
+    }
+
+}

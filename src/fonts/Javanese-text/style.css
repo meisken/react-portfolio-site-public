@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Javanese Text';
+    src: local('Javanese Text'), local('Javanese-Text'),
+        url('javanese-text.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

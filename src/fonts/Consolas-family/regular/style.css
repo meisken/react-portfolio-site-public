@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Consolas';
+    src: local('Consolas Regular'), local('Consolas-Regular'),
+        url('Consolas.woff2') format('woff2'),
+        url('Consolas.woff') format('woff'),
+        url('Consolas.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

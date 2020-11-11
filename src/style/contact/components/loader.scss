@@ -1,0 +1,44 @@
+@import '../../variables/colors';
+.spinner-loader{
+    --size:25px;
+    width: var( --size);
+    height: var( --size);
+    border-radius: 50%;
+    position: relative;
+
+ 
+    z-index: 1;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border: calc(var(--size)  / 15) solid rgba($white , 0.3);
+        border-radius: 50%;
+        z-index: -1;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border: calc(var(--size)  / 15) solid transparent;
+        border-top-color: rgba($white ,1);
+ 
+        animation: 0.75s linear spinning infinite;
+        border-radius: 50%;
+        z-index: 1;
+        @keyframes spinning {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

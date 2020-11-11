@@ -1,0 +1,61 @@
+
+@import '../../variables/screenSize';
+@import '../../variables/colors';
+.introduction{
+    width: 360px;
+    padding: 40px 30px;
+
+    /*display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;*/
+    display: grid;
+    grid-template-rows: 3.5fr 7fr 10fr ;
+    justify-items: start;
+ 
+    background:linear-gradient(rgba( $black, 0.835) 0%, rgba($black, 0.835) 100%),url('../img/portfolio_bg.JPG');
+    
+    p{
+        align-self: flex-start;
+
+      
+  
+    }
+    .social-media-links{
+
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+
+        grid-gap: 20px;
+    }
+    @media screen and (max-width:$screen1368){
+
+        width: 100%;
+        grid-template-rows:unset;
+        p{
+            margin: 20px 0 25px 0;
+        }
+ /*       grid-template-columns: 5fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        p{
+            margin:0;
+            grid-row: 2/3;
+            grid-column: 1/4;
+        }
+*/
+    }
+    @media screen and (max-width:$ipad){
+        font-size: 13px;
+    }
+
+
+
+
+    & > :last-child{
+        align-self: flex-end;
+
+
+    }
+
+
+}

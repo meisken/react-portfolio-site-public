@@ -1,0 +1,43 @@
+@import '../../variables/colors';
+@import '../../variables/screenSize';
+.poster{
+    padding: 130px 0 50px 0;
+
+    position: relative;
+ 
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    h1{
+        line-height: 70px;
+    }
+    p{
+        
+    }
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0%;
+        left: 0;
+        right: 0;
+        bottom: -50%;
+        background: linear-gradient(rgba($dark-blue, 0.835) 0%, rgba($dark-blue, 0.835) 100%),url("../img/poster_bg.jpeg");
+        background-size: cover;
+        z-index: -1;
+    }
+    @media screen and (max-width:$screen1368){
+        padding: 50px 0;
+        h1{
+            line-height: 60px;
+        }
+    }
+    @media screen and (max-width:$ipad){
+        padding: 50px 40px;
+    }
+}

@@ -1,0 +1,67 @@
+@import "../../variables/screenSize";
+.headline{
+    font-size: 15.5px;
+    z-index: 0;
+    @media screen and (max-width:$ipad){
+        font-size: 14px;
+    }
+    @media screen and (max-width:$phone){
+        font-size: 13px;
+    }
+    h5{
+        opacity:0.5;
+    }
+    h1{
+        margin-top: 15px;
+    }
+    p{
+        max-width: 600px;
+        margin-top: 15px;
+        opacity: 0.8;
+        @media screen and(max-width:$ipad){
+            margin-bottom: 45px;
+        }
+    }
+    hr{
+        height: 3px !important;
+        width: 225px !important;
+        background: var(--blue);
+        margin-top: 20px;
+        margin-bottom: 50px;
+        @media screen and(max-width:$ipad){
+            display: none;
+        }
+    }
+
+
+    @media screen and(min-width:$screen1024){
+        .headline-text-scrolling-animation{
+            display: block;
+            opacity: 0;
+            transition:1.25s ease-out 0.75s transform,1.25s ease-out 0.75s opacity;
+            &.activated{
+                opacity: 1;
+            }
+        }
+        .headline-underline-scrolling-animation{
+
+            display: block;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition:1s ease-out 2s transform,1s ease-out 2s opacity;
+            &.activated{
+                transform: scaleX(1);
+            }
+        }
+        .headline-button-scrolling-animation{
+            display: block;
+            opacity: 0;
+            transform: translateY(50%);
+            transition:1.25s ease-out 1.25s transform,1.25s ease-out 1.25s opacity;
+            &.activated{
+                opacity:1;
+                transform: translateY(0%);
+            }
+        }
+    }
+}

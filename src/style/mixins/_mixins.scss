@@ -1,0 +1,20 @@
+
+@mixin element-full-size {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@mixin grid($coulmes,$rows,$rowsOption){
+    display: grid;
+    grid-template-columns: $coulme;
+
+    @if index($rowsOption , 'auto' ){
+        grid-auto-columns:repeat() ;
+    }@else{
+        grid-template-rows: $rows;
+    }
+   
+}

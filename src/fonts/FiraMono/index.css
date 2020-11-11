@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'FireMono';
+    src: local('FiraMono-Regular'), local('FiraMono-Regular'),
+        url('FiraMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FireMono';
+    src: local('FiraMono-Medium'), local('FiraMono-Medium'),
+        url('FiraMono-Medium.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FireMono';
+    src: local('FiraMono-Bold'), local('FiraMono-Bold'),
+        url('FiraMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
