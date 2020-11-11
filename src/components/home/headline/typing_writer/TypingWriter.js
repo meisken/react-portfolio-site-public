@@ -1,4 +1,4 @@
-import React,{useRef,useEffect,useState} from 'react'
+import React,{useEffect,useState} from 'react'
 import './typingWriter.css'
 
 const TypingWriter = ({text:textProps,onAnimationEnd ,typingSpeed = 115,beforeNextLineDelay = 500,startingDelay = 0,infinite }) => {
@@ -53,6 +53,7 @@ const TypingWriter = ({text:textProps,onAnimationEnd ,typingSpeed = 115,beforeNe
 
 
     const [currentTextIndex,setCurrentTextIndex] = useState(0);
+    const [startDelay,setStartDelay] = useState(startingDelay);
 
     useEffect(() => {
         
@@ -67,6 +68,7 @@ const TypingWriter = ({text:textProps,onAnimationEnd ,typingSpeed = 115,beforeNe
                     setCurrentTextIndex(currentTextIndex + 1);
                 }
                 if(currentTextIndex === textProps.length - 1){
+                    setStartDelay(0);
                     if(infinite){
                         setCurrentTextIndex(0);
                     }
@@ -78,7 +80,7 @@ const TypingWriter = ({text:textProps,onAnimationEnd ,typingSpeed = 115,beforeNe
                     
                 }
             });
-        })
+        },startDelay)
 
 
 

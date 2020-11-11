@@ -42,7 +42,7 @@ export default function ScrollingAnimationTrigger({children,beforeActivateClassN
         }
     }
     useEffect(() => {
-        eventHandler()
+        eventHandler();
         window.addEventListener("scroll",eventHandler);
         return  () => {
             window.removeEventListener("scroll",eventHandler);

@@ -7,11 +7,11 @@ import SocialMediaButton from './social_media_button/SocialMediaButton'
 
 export default function Portfolio() {
     
-    const [webs] = useState([
+    const webs = [
         {num:"01",heading:"Audio Streaming Website",segment:(<span>Enjoy amazing music here and relax with the music live demo: <a href="https://meiskena-audio.web.app/">audio.com</a></span>),videoPath:require('../../video/audio_website.mp4'),poster:require('../../img/audio.png')},
         {num:"02",heading:"Online Calendar Web app",segment:(<span>Manage your time. Reduce unnecessary time spending live demo: <a href="https://calendar-957dd.web.app/">calendar.com</a></span>),videoPath:require('../../video/calendar_website.mp4'),poster:require('../../img/schedule.png')},
         {num:"03",heading:"Personal Portfolio Website",segment:"Here is the showcase which placing my works. It shows apart of my ability.",videoPath:require('../../video/audio_website.mp4'),poster:require('../../img/audio.png')}
-    ]);
+    ];
     return (
         <div className="portfolio" id="portfolio-page">
 

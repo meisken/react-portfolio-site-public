@@ -7,7 +7,7 @@ export default function Headline() {
         <div className="headline" >
             <ScrollingAnimationTrigger beforeActivateClassName="headline-text-scrolling-animation">
                 <h5 className="SegoeUI-font regular">Let's go</h5>
-                <h1 className="SegoeUI-font bold ">Beyond Impossible<br/>Make It <TypingWriter infinite text={["Creative","innovation"]}></TypingWriter> </h1>
+                <h1 className="SegoeUI-font bold ">Beyond Impossible<br/>Make It <TypingWriter infinite beforeNextLineDelay={1500}  startingDelay={1000} text={["Creative","innovation"]}></TypingWriter> </h1>
                 <p  className="FireMono-font regular">Creating incredible website woo you audience and build your brand</p>
             </ScrollingAnimationTrigger>
             <ScrollingAnimationTrigger beforeActivateClassName="headline-underline-scrolling-animation">
