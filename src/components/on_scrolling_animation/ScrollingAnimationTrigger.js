@@ -12,12 +12,11 @@ export default function ScrollingAnimationTrigger({children,beforeActivateClassN
             let {top,height} = element.getBoundingClientRect();
             let {offsetTop} = element;
         
+
+            if(top + height/2 <= window.innerHeight && top > 0){
           
-           // if(top - window.innerHeight  <= 0 - height/2 && top > 0 ){
-        
-            if((top - window.innerHeight  <= 0 - height/2 && top > 0 ) || (offsetTop <= window.innerHeight && window.pageYOffset < window.innerHeight)){
                 resolve();
-     
+             
               
             }
             if(top - window.innerHeight  > 0){

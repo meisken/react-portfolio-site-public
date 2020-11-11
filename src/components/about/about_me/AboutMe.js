@@ -6,7 +6,7 @@ export default function AboutMe() {
     return (
         <div className="about-me">
             
-            <Title key={1}>About me</Title>
+            <Title>About me</Title>
 
             <ScrollingAnimationTrigger beforeActivateClassName="about-hero-scrolling-animation">
                 <div className="hero">

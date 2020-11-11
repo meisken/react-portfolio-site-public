@@ -52,17 +52,17 @@ export default function ContactForm() {
 
             <form autoComplete="off" onSubmit={handleSubmit}>
                 <div>
-                    <input type="text" id="name" onInput={handleInput} value={formData.name} required/>
+                    <input type="text" id="name" onChange={handleInput} value={formData.name} required/>
                     <label htmlFor="Name" className={ formData.name !== '' ?"extended" : ""}><h6>Your Name</h6></label>
                     <div className="input_underline"></div>
                 </div>
                 <div>
-                    <input type="email" id="email" onInput={handleInput} value={formData.email} required/>
+                    <input type="email" id="email" onChange={handleInput} value={formData.email} required/>
                     <label htmlFor="Email" className={ formData.email !== '' ?"extended" : ""}><h6>Email</h6></label>
                     <div className="input_underline"></div>
                 </div>
                 <div>
-                    <input type="Message" id="message" onInput={handleInput} value={formData.message} required/>
+                    <input type="Message" id="message" onChange={handleInput} value={formData.message} required/>
                     <label htmlFor="Message" className={ formData.message !== '' ?"extended" : ""}><h6>Message</h6></label>
                     <div className="input_underline"></div>
                 </div>
