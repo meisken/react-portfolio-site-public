@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../UnderlineTitle'
 import SubSegments from './subsegments/Subsegments'
+import ScrollingAnimationTrigger from '../../on_scrolling_animation/ScrollingAnimationTrigger'
 export default function Feature() {
     const features =[
         {subheading:"Aesthetic and User-friendly UI",details:"I designing and developing website with intuitive UI which can be avoiding  user get confused and guessing."},
@@ -12,13 +13,13 @@ export default function Feature() {
         <div className="feature">
                 <Title>{"Feature & Skills"}</Title>
 
-                <article>
+                <ScrollingAnimationTrigger beforeActivateClassName="about-feature-scrolling-animation">
                     <h3>Why choose me</h3>
                     <p className="SegoeUI-font light">I can build you website with code and custom any function you want to a large extent. Also I use the most popular programming language which ensure the website can be stable and Maintainable.</p>
                     
                     <SubSegments dataArray={features}></SubSegments>
 
-                </article>
+                </ScrollingAnimationTrigger>
         </div>
     )
 }

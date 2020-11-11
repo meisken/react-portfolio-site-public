@@ -743,18 +743,27 @@
   }
 }
 
-.feature > article {
+.feature > .about-feature-scrolling-animation {
   margin-top: 100px;
   padding: 0 40px;
 }
-.feature > article p {
+@media screen and (min-width: 1024px) {
+  .feature > .about-feature-scrolling-animation {
+    opacity: 0;
+  }
+  .feature > .about-feature-scrolling-animation.activated {
+    opacity: 1;
+    transition: 1s opacity ease-in-out;
+  }
+}
+.feature > .about-feature-scrolling-animation p {
   margin: 20px 0 65px 0;
 }
 @media screen and (max-width: 1024px) {
   .feature {
     padding: 0 20px;
   }
-  .feature > article {
+  .feature > .about-feature-scrolling-animation {
     padding: 0px;
   }
 }
