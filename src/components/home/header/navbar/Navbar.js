@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import HamburgerButton from "./HamburgerMenu"
 export default function Navbar() {
-    const routes = [{name:"Home",id:"home-page"},{name:"About me",id:"about-page"},{name:"contact me",id:"contact-page"}];
+    const routes = [{name:"Home",id:"home-page"},{name:"About me",id:"about-page"},{name:"Contact me",id:"contact-page"}];
     const [cursorPos,setCursorPos] = useState({x:0,y:0});
     const [menuActive,setMenuActive] = useState(false);
     function cursorPosition(e){

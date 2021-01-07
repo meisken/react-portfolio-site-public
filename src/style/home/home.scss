@@ -10,9 +10,13 @@
     height: 100vh;
     @media screen and (max-width:$ipad){
         height: 700px;
+        /*
+        
         background-image: url("../img/hero-background.png");
         background-size:auto 100%;
         background-position: 40%;
+        */
+
     }
     
 
@@ -54,7 +58,13 @@
         z-index: -100;
         min-height: 100%;
         @media screen and(max-width:$ipad){
+    
+            right:-80%;
+     
+        
+            /*
             display: none;
+            */
 
         }
     }

@@ -13,7 +13,8 @@ export default function AboutMe() {
                     
                     <h3 className="SegoeUI-font semibold">I'm Ken Tang<br/>I'm Web Developer<br/>I can build you a wonderful website</h3>
                     <p className="SegoeUI-font light">I love using technology and building beautiful things.</p>
-                    <InvertedButton>download my resume</InvertedButton>
+                    <a href="https://www.upwork.com/freelancers/~01698d1c0db877b32d"><InvertedButton>download my resume</InvertedButton></a>
+                    
                 </div>
             </ScrollingAnimationTrigger>
 

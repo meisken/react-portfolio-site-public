@@ -491,9 +491,12 @@
 @media screen and (max-width: 768px) {
   .home {
     height: 700px;
+    /*
+
     background-image: url("../img/hero-background.png");
-    background-size: auto 100%;
+    background-size:auto 100%;
     background-position: 40%;
+    */
   }
 }
 .home .hero-wrapper {
@@ -536,7 +539,10 @@
 }
 @media screen and (max-width: 768px) {
   .home .hero-background {
+    right: -80%;
+    /*
     display: none;
+    */
   }
 }
 
