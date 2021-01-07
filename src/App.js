@@ -5,11 +5,11 @@ import WhatIDo from './components/what_i_do/WhatIDo'
 import About from './components/about/About'
 import Contact from './components/contact/Contact'
 import './style/index.css'
-
+import {httpsCheck} from './components/global/httpsCheck'
 
 function App() {
   useEffect(() => {
-
+    httpsCheck();
     const oneHundredVh = () => {
       document.documentElement.style.setProperty('--100vh', `${window.innerHeight}px`)
     }
